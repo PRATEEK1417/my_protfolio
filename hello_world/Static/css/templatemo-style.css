@@ -1,13 +1,9 @@
-/*
 
-Ultra Profile
 
-https://templatemo.com/tm-464-ultra-profile
-
-*/
 
 body {
   background: #ffffff;
+  background: #e6eeff;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   color: #606060;
@@ -17,20 +13,107 @@ body {
 html, body {
   width: 100%;
   overflow-x: hidden;
+
 }
-h1,h2,h3 { font-weight: 300; }
-p { line-height: 28px; }
+h1,h2,h3 {
+  font-weight: 300;
+
+  position: relative;
+  text-align: center;
+  color: #353535;
+  font-size: 50px;
+  font-family: "Cormorant Garamond", serif;
+}
+p {
+line-height: 28px;
+
+ font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  color: #676767;
+
+}
 hr {
   border-color: #f2f2f2;
   width: 100px;
   margin-bottom: 40px;
 }
+
 .title {
   color: #303030;
   font-size: 60px;
   padding-bottom: 40px;
   text-transform: uppercase;
 }
+
+
+
+/*START_PRELOADER*/
+#loader-div{
+display: block;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(26, 0, 26, 2);
+}
+.load{
+position: absolute;
+    top: 50%;
+    left: 50% !important;
+    transform:translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width:100px;
+  height:100px;
+}
+.load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+
+.load :first-child{background:#1a001a;animation-delay:-1.5s}
+.load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+.load :nth-child(3){background:#e6e600;animation-delay:-0.5s}
+.load :last-child{background:#193B48}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+}
+/*END_PRELOADER*/
+
+
+
+/* START SHINE */
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 150px;
+  height: 60px;
+  color: #99ccff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+/* END SHINE */
 
 /* START NAVIGATION */
 .sticky-navigation { opacity: 0; }
@@ -90,7 +173,7 @@ hr {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  display: flex;.btn-11
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -246,6 +329,8 @@ cursor: none;
   -ms-transform: scale(1.0);
   transform: scale(1.0);
 }
+
+
 .portfolio-overlay .fa {
   border: 1px solid #666;
   border-radius: 0;
@@ -322,6 +407,49 @@ cursor: none;
 }
 /* END PORTFOLIO */
 
+/* START BUTTON */
+.btn-11 {
+  border: none;
+  background: rgb(251,33,117);
+    background: linear-gradient(0deg, rgba(0, 51, 102) 0%, rgba(0, 128, 255) 100%);
+    color:#99ccff;
+    overflow: hidden;
+}
+.btn-11:hover {
+    text-decoration: none;
+    color:s;
+}
+.btn-11:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color:#99ccff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+.btn-11:hover{
+  opacity: .7;
+}
+.btn-11:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+/* END BUTTON */
+
+
 /* START RESUME */
 .tm-red-text { color: #ffff1a; }
 .tm-info-label {
@@ -362,7 +490,7 @@ cursor: none;
 
 
 /* START SOCIAL */
-.container.col-md-3
+.container
 {
     width: 1000px;
     position: relative;
@@ -370,7 +498,7 @@ cursor: none;
     justify-content: space-between;
 }
 
-.container .card .col-md-3{
+.container .card {
     position: relative;
     border-radius: 10px;
 }
@@ -409,7 +537,7 @@ cursor: none;
     color: #fff;
 }
 
-i {
+{
     position: absolute;
     top: 50%;
     left: 50%;
